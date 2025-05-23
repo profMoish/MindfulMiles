@@ -5,13 +5,7 @@ const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true});
 
 
-const reminders = [
-   'sleep',
-   'dream',
-   'love',
-   'drink',
-   'lazy'
-]
+const reminders = [];
 
 bot.on('message', (msg) => {
   reminders.push(msg.text)
